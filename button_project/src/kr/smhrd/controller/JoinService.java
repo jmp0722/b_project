@@ -32,8 +32,8 @@ public class JoinService implements Command {
 		} else {
 			System.out.println("회원가입 실패");
 		}
-		
-		moveURL = "membermain.jsp";
+		// return값 변경하기
+		moveURL = "templete.html";
 		return moveURL;
 	}
 

@@ -25,6 +25,7 @@ public class MemberDAO {
 		return row;
 	}
 
+	// 2. 로그인
 	public MemberVO login(MemberVO vo) {
 		MemberVO result = null;
 		try {
@@ -37,4 +38,33 @@ public class MemberDAO {
 		}
 		return result;
 	}
+
+	// 3. 회원 정보 수정
+	public int update(MemberVO vo) {
+		int row = 0;
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			// mapper에서 지정해준 이름, 가지고 갈 값
+			row = sqlSession.update("kr.smhrd.model.MemberDAO.memberupdate", vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return row;
+	} // 회원 수정 끝
+
+	// 4. 회원 삭제
+	public int delete(String id) {
+		int row = 0;
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			row = sqlSession.delete("kr.smhrd.model.MemberDAO.memberupdate", id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return row;
+	} // 회원 삭제 끝
 }

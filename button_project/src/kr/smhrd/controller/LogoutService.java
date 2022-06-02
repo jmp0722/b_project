@@ -13,7 +13,8 @@ import kr.smhrd.command.Command;
 		public String execute(HttpServletRequest request, HttpServletResponse response) {
 			HttpSession session = request.getSession();
 			session.invalidate();
-			return "membermain.jsp";
+			// return값 변경하기
+			return "templete.html";
 		}
 
 }

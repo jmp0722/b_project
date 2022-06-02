@@ -14,8 +14,17 @@
 	</insert>
 
 	<!-- 로그인 -->
-	<!-- 로그인 -->
 	<select id="memberlogin" parameterType = "MemberVO" resultType="MemberVO">
 		select * from member where id = #{id} and pw = #{pw}
 	</select>
+	
+	<!-- 회원 수정 기능 -->
+	<update id="memberupdate" parameterType="MemberVO">
+		update member set pw = #{pw}, phone = #{phone}, m_address = #{m_address} where id = #{id}
+	</update>
+	
+	<!-- 회원 삭제 기능 -->
+	<delete id="memberdelete" parameterType="String">
+		delete from member where id = #{id}
+	</delete>
 </mapper>
