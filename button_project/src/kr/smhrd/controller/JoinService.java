@@ -3,9 +3,8 @@ package kr.smhrd.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.smhrd.command.Command;
+import kr.smhrd.domain.MemberVO;
 import kr.smhrd.model.MemberDAO;
-import kr.smhrd.model.MemberVO;
 
 public class JoinService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {

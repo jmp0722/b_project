@@ -1,4 +1,4 @@
-package kr.smhrd.model;
+package kr.smhrd.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

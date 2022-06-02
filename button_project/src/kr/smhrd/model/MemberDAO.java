@@ -4,6 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import kr.smhrd.database.SqlSessionManager;
+import kr.smhrd.domain.MemberVO;
 
 public class MemberDAO {
 

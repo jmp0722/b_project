@@ -9,8 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-import kr.smhrd.command.Command;
+import kr.smhrd.controller.Command;
 import kr.smhrd.controller.JoinService;
 import kr.smhrd.controller.LoginService;
 import kr.smhrd.controller.LogoutService;
